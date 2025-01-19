@@ -1,4 +1,13 @@
-
+:root {
+    --cornflower: #e7e9fc;
+    --white: #fff;
+    --slate: #434455;
+    --navy-blue: #2e2f42;
+    --iris: #4d5ae5;
+    --ocean: #404bbf;
+    --cloud: #f4f4fd;
+    --green:#31D0AA;
+  }
 
 
 
@@ -32,6 +41,13 @@ img {
     width: 1158px;
     margin: 0 auto;
     padding: 0 15px;
+}
+.container-footer {
+    width: 1158px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    align-items: baseline;
 }
 .header {
     border-bottom: 1px solid #e7e9fc;
@@ -148,6 +164,13 @@ header .address-menu .address-mail-number:active{
 .hero-image {
     background-color: #2E2F42;
     padding: 188px 0;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)), url(../images/office.png);
+      max-width: 1440px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+
 }
 .hero-image-title {
     font-size: 56px;
@@ -174,6 +197,7 @@ header .address-menu .address-mail-number:active{
     height: 56px;
     border: none;   
     border-radius: 4px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }   
 
@@ -183,6 +207,8 @@ header .address-menu .address-mail-number:active{
 .hero-image-button:focus {
     background-color: #404bbf;
 }
+
+
 /* Main-Section-1 - End */
 
 
@@ -228,6 +254,19 @@ header .address-menu .address-mail-number:active{
     color: #434455;
     width:264px ;
     }
+
+    .rectangle-icon{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        height: 112px;
+        background-color: #F4F4FD;
+        border-radius: 4px;
+        border:1px solid #8e8f99;
+        margin-bottom: 8px;
+      
+    }
+    
 /* Main-Section-2 - End */
 
 
@@ -261,7 +300,10 @@ header .address-menu .address-mail-number:active{
     width: calc((100% - 3 * 24px) / 4);
     border-radius: 0px 0px 4px 4px ;
     width: 100%;
-    height: 380px; ;
+    height: 428px; 
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 
+    0px 1px 1px rgba(46, 47, 66, 0.16),
+     0px 2px 1px rgba(46, 47, 66, 0.08);
 
 }
 .name-title {
@@ -280,11 +322,39 @@ header .address-menu .address-mail-number:active{
     letter-spacing: 0.02em;
     color: #434455; 
     text-align: center;
- 
-    
-   
 }
 
+.social-media-icon-list {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    list-style-type: none;
+    margin-top: 8px;
+}
+.social-media-icon {
+    width: 40px;
+    height:40px;
+    
+}
+
+.icon-icon{
+  width: 100%;
+  height: 100%;  
+    background-color: #4D5AE5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-icon:hover,
+.icon-icon:focus{
+    background-color: #404bbf;
+}
+
+.social-media-icon-design{
+    fill: #F4F4FD;
+}
 /* Main-Section-3 - End */
 
 
@@ -304,6 +374,13 @@ header .address-menu .address-mail-number:active{
 }
 .portfolio-ul-li {
     width: calc((100% - 48px) / 3);  
+    transition: box-shadow 250ms cubic-bezier(0.4,0,0.2,1);
+}
+.portfolio-ul-li:hover{
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+     0px 1px 1px rgba(46, 47, 66, 0.16),
+      0px 2px 1px rgba(46, 47, 66, 0.08);
+     
 }
 .app-category {
     padding: 32px 16px;
@@ -333,8 +410,35 @@ header .address-menu .address-mail-number:active{
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
+    transform: translateY(100%) ;
+}
+.portfolio-ul-li:hover .image-card-text{
+    transform: translateY(0%);
+}
+
+    
+
+.image-card{
+    position: relative;
+    overflow: hidden;
+}
+.image-card-text{
+    position: absolute;
+    top: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #F4F4FD;
+    padding: 40px 32px;
+    background-color: #4D5AE5;
+    height: 100%;
+    width: 100%;
+    transition: transform 250ms cubic-bezier(0.4,0,0.2,1);
+    transform: translateY(100%);
 
 }
+
+
 /* Main-Section-4 - End */
 
 
@@ -366,6 +470,47 @@ header .address-menu .address-mail-number:active{
     margin-bottom: 16px;
     text-decoration: none;
 }
+.footer-logo-text{
+ margin-right: 120px;
 
+}
 
+.footer-social-media {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #fff;
+    margin-bottom: 16px;
+
+}
+.footer-social-media-icon-list {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    list-style-type: none;
+    margin-top: 8px;
+}
+.footer-social-media-icon {
+    width: 40px;
+    height: 40px;
+}
+.footer-icon{
+    width: 100%;
+    height: 100%;
+    background-color: var(--iris);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-icon:hover,
+.footer-icon:focus {
+    background-color: var(--green);
+}
+
+.footer-social-media-icon-design {
+    fill:var(--cloud);
+}
 /* Footer - End */
